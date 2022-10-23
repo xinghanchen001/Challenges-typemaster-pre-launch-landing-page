@@ -65,12 +65,11 @@ a{
     
 /*---------------------- LAYOUT-------------------------*/
 body{
-    min-width: 350px;
+    min-width: 375px;
     display: flex;
     justify-content: center
 }
 section{
-    
     max-width: 1920px;
 }
 @media only screen and (min-width: 1200px) {
@@ -187,6 +186,7 @@ section{
 .release__tag{
     grid-area: text;
     align-self: center;
+    text-align: end;
     color: var(--light-blue);
     font-weight: 600;
 }
@@ -208,12 +208,13 @@ section{
 }
 @media only screen and (min-width: 477px) and (max-width: 768px) {
     .container__block1{
-        
-        grid-template-rows: 1fr 1.3fr;
-        
+        grid-template-rows: 1fr 1.3fr; 
+    }
+    .release__tag{
+        text-align: center;
     }
 }
-@media only screen and (min-width: 768px) and (max-width: 12000px) {
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
     .container__block1{
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 1fr;
@@ -223,6 +224,9 @@ section{
     }
     .image__block{
         width: calc(100% + 2rem);
+    }
+    .release__tag{
+        text-align: center;
     }
 }
 @media only screen and (min-width: 1200px) {
@@ -476,12 +480,13 @@ section{
         width: 80%;
         align-self: center;
     }
-    
     .header__box{
         width: 20%;
         align-items: flex-start;
         padding: 0 1rem 0 0;
         margin: 1rem 1rem 2rem 1rem;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
     .header__box h3{
         text-align: start;
